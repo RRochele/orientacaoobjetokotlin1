@@ -9,8 +9,7 @@ A ideia desse projeto é criar um sistema para bancos.
 
 `A classe é a estrutura de como vai ser o objeto`
 
-`val`  
-eu posso alterar a informação a qualquer momento, mas o  CPF não é uma não é uma boa opção para ser alterada.
+`val`   eu posso alterar a informação a qualquer momento, mas o  CPF não é uma não é uma boa opção para ser alterada.
 Desta forma, fiz com que o meu cfp sempre seja inicializado e não mais alterado.
 
 `Private var cpf: String`
