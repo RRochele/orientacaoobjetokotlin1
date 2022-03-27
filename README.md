@@ -23,5 +23,5 @@ Então, vou *setar* o **objeto**
 
 `Uma vez que eu crio a instancia eu não consigo alterar`
 ~~~
-**Resumo:** Posso usar o modificador de visibilidade para uma propriedade em si, mas decidi deixar como private somente o *set* que é a propriedade que atribui valor.
+Resumo: Posso usar o modificador de visibilidade para uma propriedade em si, mas decidi deixar como private somente o `set` que é a propriedade que atribui valor.
 ~~~
