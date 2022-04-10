@@ -21,6 +21,7 @@ fun main() {
     println(contaJoaquim.titular)
     println(contaJoaquim.numero)
     println(contaJoaquim.getSaldo())
+}
 
 //    println("depositando na conta da Rochele")
 //    contaRochele.deposita(50.0)
@@ -67,7 +68,6 @@ class Conta {
         //this: vc esta mexendo em alguma coisa do próprio objeto
         this.saldo += valor
     }
-}
 
     fun saca(valor: Double) {
         if (saldo >= valor) {
@@ -90,73 +90,76 @@ class Conta {
     }
 
     fun setSaldo(valor: Double) {
-            saldo= valor
-
-}
-}
-
-fun testaCopiasEReferencias() {
-    // variaveis do tipo inteiro
-
-    val numeroX = 10
-    var numeroY = numeroX
-    numeroY++
-    println("numeroX $numeroX")
-    println("numeroY $numeroY")
-
-    // joao aponta para a conta e maria tambem.
-    // lidar com objeto é lidar com referência
-    val contaJoao = Conta()
-    contaJoao.titular = "João"
-    var contaMaria = Conta()
-    contaMaria.titular = "Maria"
-    println("titular conta joão : ${contaJoao.titular}")
-    println("titular conta maria : ${contaMaria.titular}")
-
-    println(contaJoao)
-    println(contaMaria)
-
-}
-
-fun testaLacos() {
-    var i = 0
-    while (i < 5) {
-        val titular: String = "Rochele $i"
-        val numeroConta: Int = 1000 + i
-        var saldo = i + 10.0
-
-        println("titular $titular")
-        println("numero da conta $numeroConta")
-        println("saldo da conta $saldo")
-        println()
-        i++
+        saldo= valor
 
     }
 }
 
-for (i in 5 downTo 1) {
-    while ()
-}
-
-val titular: String = "Rochele $i"
-val numeroConta: Int = 1000 + i
-var saldo = i + 10.0
 
 
-println("titular $titular")
-println("numero da conta $numeroConta")
-println("saldo da conta $saldo")
-println()
-testaCondicoes(saldo)
+//fun testaCopiasEReferencias() {
+//    // variaveis do tipo inteiro
+//
+//    val numeroX = 10
+//    var numeroY = numeroX
+//    numeroY++
+//    println("numeroX $numeroX")
+//    println("numeroY $numeroY")
+//
+//    // joao aponta para a conta e maria tambem.
+//    // lidar com objeto é lidar com referência
+//    val contaJoao = Conta()
+//    contaJoao.titular = "João"
+//    var contaMaria = Conta()
+//    contaMaria.titular = "Maria"
+//    println("titular conta joão : ${contaJoao.titular}")
+//    println("titular conta maria : ${contaMaria.titular}")
+//
+//    println(contaJoao)
+//    println(contaMaria)
+//
+//}
 
+//fun testaLacos() {
+//    var i = 0
+//    while (i < 5) {
+//        val titular: String = "Rochele $i"
+//        val numeroConta: Int = 1000 + i
+//        var saldo = i + 10.0
+//
+//        println("titular $titular")
+//        println("numero da conta $numeroConta")
+//        println("saldo da conta $saldo")
+//        println()
+//        i++
+//
+//    }
+//}
 
-fun testaCondicoes(saldo: Double) = if (saldo > 0.0) {
-    println("conta é positiva")
-} else if (saldo == 0.0) {
-    println("conta é neutra")
-} else {
-    println("conta é negativa")
-}
+//for (i in 5 downTo 1) {
+//    while ()
+//}
+//
+//val titular: String = "Rochele $i"
+//val numeroConta: Int = 1000 + i
+//var saldo = i + 10.0
+//
+//
+//println("titular $titular")
+//println("numero da conta $numeroConta")
+//println("saldo da conta $saldo")
+//println()
+//testaCondicoes(saldo)
+//
+//
+//fun testaCondicoes(saldo: Double) = if (saldo > 0.0) {
+//    println("conta é positiva")
+//} else if (saldo == 0.0) {
+//    println("conta é neutra")
+//} else {
+//    println("conta é negativa")
+//}
+//}
 
 
 // outra maneira usando when
