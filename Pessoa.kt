@@ -3,12 +3,12 @@ package kotlindigitalinnovation
 fun main() {
     println("Bem vindo ao Bank")
 
-    val contaRochele = Conta("Rochele", 1000)
+    val contaRochele = Conta( titular= "Rochele", numero = 1000)
     contaRochele.deposita(200.0)
     //contaRochele.setSaldo(200.0)
 
 
-    val contaJoaquim = Conta("Joaquim", 1001)
+    val contaJoaquim = Conta(titular = "Joaquim", numero = 1001)
     contaJoaquim.deposita(300.0)
     //contaJoaquim.setSaldo(300.0)
 
@@ -47,7 +47,7 @@ fun main() {
 
     println("Transferência da conta do Joaquim para Rochele")
 
-    if (contaJoaquim.transfere(100.0, contaRochele)) {
+    if (contaJoaquim.transfere(valor= 100.0, destino = contaRochele)) {
         println("TRansferência sucedida")
     } else {
         println("Falha na transferência")
@@ -58,7 +58,7 @@ fun main() {
 
 class Conta(
     var titular: String,
-    var numero: Int
+    val numero: Int
     ) {
     var saldo = 0.0
         private set
