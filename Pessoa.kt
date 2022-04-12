@@ -2,16 +2,13 @@ package kotlindigitalinnovation
 
 fun main() {
     println("Bem vindo ao Bank")
-    val contaRochele = Conta()
-    contaRochele.titular = "Rochele"
-    contaRochele.numero = 1000
-    contaRochele.deposita(-200.0)
+
+    val contaRochele = Conta("Rochele", 1000)
+    contaRochele.deposita(200.0)
     //contaRochele.setSaldo(200.0)
 
 
-    val contaJoaquim = Conta()
-    contaJoaquim.titular = "Joaquim"
-    contaJoaquim.numero = 1001
+    val contaJoaquim = Conta("Joaquim", 1001)
     contaJoaquim.deposita(300.0)
     //contaJoaquim.setSaldo(300.0)
 
@@ -59,12 +56,12 @@ fun main() {
     println(contaJoaquim.saldo)
 }
 
-class Conta {
-    var titular = ""
-    var numero = 0
+class Conta(
+    var titular: String,
+    var numero: Int
+    ) {
     var saldo = 0.0
         private set
-
 
     fun deposita(valor: Double) {
         if (valor > 0) {
@@ -89,38 +86,30 @@ class Conta {
 
     }
 
-//    fun getSaldo(): Double {
-//        return saldo
-//    }
-//
-//    fun setSaldo(valor: Double) {
-//        saldo= valor
-//
-//    }
 
+    fun testaCopiasEReferencias() {
+        // variaveis do tipo inteiro
 
-//fun testaCopiasEReferencias() {
-//    // variaveis do tipo inteiro
-//
-//    val numeroX = 10
-//    var numeroY = numeroX
-//    numeroY++
-//    println("numeroX $numeroX")
-//    println("numeroY $numeroY")
-//
-//    // joao aponta para a conta e maria tambem.
-//    // lidar com objeto é lidar com referência
-//    val contaJoao = Conta()
-//    contaJoao.titular = "João"
-//    var contaMaria = Conta()
-//    contaMaria.titular = "Maria"
-//    println("titular conta joão : ${contaJoao.titular}")
-//    println("titular conta maria : ${contaMaria.titular}")
-//
-//    println(contaJoao)
-//    println(contaMaria)
-//
-//}
+        val numeroX = 10
+        var numeroY = numeroX
+        numeroY++
+
+        println("numeroX $numeroX")
+        println("numeroY $numeroY")
+
+        // joao aponta para a conta e maria tambem.
+        // lidar com objeto é lidar com referência
+        val contaJoao = Conta("João", 1002)
+        contaJoao.titular = "João"
+        val contaMaria = Conta("Maria", 1003)
+        contaMaria.titular = "Maria"
+        println("titular conta joão : ${contaJoao.titular}")
+        println("titular conta maria : ${contaMaria.titular}")
+
+        println(contaJoao)
+        println(contaMaria)
+
+    }
 
 //    fun testaLacos() {
 //        var i = 0
